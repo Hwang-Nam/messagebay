@@ -1,6 +1,26 @@
 @import "base";
 @import "header";
 
+@mixin hover-lift($offset: 8px) {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-#{$offset});
+  }
+}
+
+@mixin section-title-decor($img: "../images/decor1.png", $height: 16px) {
+  &::after {
+    content: "";
+    display: block;
+    height: $height;
+    background-image: url(#{$img});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
 //
 .section_title {
   img {
@@ -8,22 +28,26 @@
     margin-right: auto;
   }
 
-  &::after {
-    content: "";
-    display: block;
-    height: 16px;
-    background-image: url("../images/x1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  @include section-title-decor();
 }
 
-.overlay {
+@mixin overlay($color: rgba(0, 0, 0, 0.5)) {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: $color;
   z-index: 1;
+}
+
+@mixin bg-full() {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 // ================ suggest ===============
@@ -75,6 +99,7 @@
 
   &__item {
     padding: 12px;
+    @include hover-lift();
   }
 
   &__item-img {
@@ -167,6 +192,7 @@
   }
   &__btn {
     padding: 8px 24px;
+    margin-right: 12px;
     background-color: $primary;
     border: none;
     height: min-content;
@@ -201,15 +227,11 @@
   background-color: #000;
 
   &__bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+    @include bg-full();
+  }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  &__overlay {
+    @include overlay();
   }
 
   &__content {
@@ -255,5 +277,83 @@
     margin-top: 4px;
     font-style: italic;
     color: #ccc;
+  }
+}
+
+// ============ last news ===========
+.news-latest {
+  position: relative;
+  padding: 32px 0;
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  &__bg {
+    @include bg-full();
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    &::after {
+      background-image: url("../images/decor2.png");
+      margin-top: 8px;
+    }
+  }
+  &__list {
+    margin-top: 18px;
+  }
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 24px;
+    background-color: white;
+    img {
+      width: 100%;
+    }
+    @include hover-lift();
+  }
+
+  &__info {
+    padding: 12px;
+
+    h4 {
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $secondary;
+      margin-bottom: 8px;
+    }
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  &__footer {
+    margin: 0 auto;
+    padding: 0 calc(15px / 2);
+  }
+
+  &__btn {
+    width: calc(100%);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $primary;
+    }
   }
 }
