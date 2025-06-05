@@ -1,5 +1,6 @@
 @import "base";
 @import "header";
+@import "footer";
 
 @mixin hover-lift($offset: 8px) {
   transition: transform 0.3s ease;

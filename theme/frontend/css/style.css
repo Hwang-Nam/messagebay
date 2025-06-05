@@ -29,7 +29,7 @@ img {
 }
 
 .container {
-  width: 1320px;
+  max-width: 540px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -517,6 +517,46 @@ img {
   height: 6px;
   width: 100%;
   background: transparent;
+}
+
+.footer {
+  padding-top: 24px;
+}
+.footer__nav {
+  padding-bottom: 18px;
+}
+.footer__heading {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+.footer__list li {
+  line-height: 1.5;
+}
+.footer__list--links {
+  list-style: disc;
+  margin-left: 18px;
+}
+.footer__column {
+  margin-bottom: 24px;
+}
+.footer a:hover {
+  color: #ffb628;
+}
+.footer__contact {
+  padding: 24px 0;
+  text-align: center;
+  background-color: #000;
+  color: white;
+}
+.footer__contact ul {
+  margin: 0 auto;
+  max-width: 967px;
+  line-height: 1.5;
 }
 
 .section_title img {
