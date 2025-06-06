@@ -8,66 +8,61 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
-        <img
-          src="./theme/frontend/images/bg1.png"
-          alt=""
-          class="header__background"
-        />
-        <div class="header__overlay"></div>
-        <a href="/" class="header__logo-link">
-          <img src="./theme/frontend/images/logo.png" class="" alt="Logo" />
+      <div class="header-hero">
+        <img src="./theme/frontend/images/bg1.png" class="bg" />
+        <div class="overlay"></div>
+        <a href="#" class="header-hero__logo">
+          <img src="./theme/frontend/images/logo.png" />
         </a>
       </div>
-
-      <nav class="header__nav nav">
-        <ul>
-          <li><a href="#" class="active">MessageBay</a></li>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
           <li>
-            <a href="#">Diễn đàn</a>
-            <ul>
+            <a href="#" class="header-nav__link header-nav__link--active"
+              >MessageBay</a
+            >
+          </li>
+          <li>
+            <a href="#" class="header-nav__link">Diễn đàn</a>
+            <ul class="header-nav__sublist">
               <li>
-                <a href="#">Thiết kế</a>
-                <ul>
-                  <li><a href="#">Logo</a></li>
-                  <li><a href="#">Website</a></li>
+                <a href="#" class="header-nav__link">Lịch sử</a>
+                <ul class="header-nav__sublist">
+                  <li>
+                    <a href="#" class="header-nav__link">Giai đoạn đầu</a>
+                  </li>
+                  <li>
+                    <a href="#" class="header-nav__link">Hiện đại</a>
+                  </li>
                 </ul>
               </li>
               <li>
-                <a href="#">Lập trình</a>
-                <ul>
-                  <li><a href="#">Logo</a></li>
-                  <li><a href="#">Website</a></li>
+                <a href="#" class="header-nav__link">Đội ngũ</a>
+                <ul class="header-nav__sublist">
+                  <li>
+                    <a href="#" class="header-nav__link">Giai đoạn đầu</a>
+                  </li>
+                  <li>
+                    <a href="#" class="header-nav__link">Hiện đại</a>
+                  </li>
                 </ul>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#">Tin tức</a>
-            <ul>
-              <li>
-                <a href="#">Thiết kế</a>
-                <ul>
-                  <li><a href="#">Logo</a></li>
-                  <li><a href="#">Website</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Lập trình</a>
-                <ul>
-                  <li><a href="#">Logo</a></li>
-                  <li><a href="#">Website</a></li>
-                </ul>
-              </li>
-            </ul>
+            <a href="#" class="header-nav__link">Tin tức</a>
           </li>
           <li>
-            <a href="#">Coupon</a>
+            <a href="#" class="header-nav__link">Counpon</a>
           </li>
-          <li><a href="#">Liên hệ</a></li>
+          <li>
+            <a href="#" class="header-nav__link">Liên hệ</a>
+          </li>
         </ul>
       </nav>
     </header>
+    <!-- Header -->
+
     <main>
       <section id="suggest-section" class="container">
         <div class="row">
