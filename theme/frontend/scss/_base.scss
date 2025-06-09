@@ -53,6 +53,43 @@ img {
   z-index: 1;
 }
 
+@mixin bg-overlay($image-url: null, $overlay-color: null) {
+  position: relative;
+  z-index: 2;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  @if $image-url {
+    &::before {
+      background-image: url(#{$image-url});
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+  }
+
+  @if $overlay-color != null {
+    &::after {
+      background-color: $overlay-color;
+      z-index: 1;
+    }
+  } @else {
+    &::after {
+      display: none;
+    }
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 @mixin mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -76,5 +113,24 @@ img {
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@mixin breakpoint($point, $direction: min) {
+  @if $direction == max {
+    @media (max-width: map-get($breakpoints, $point)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($breakpoints, $point)) {
+      @content;
+    }
   }
 }

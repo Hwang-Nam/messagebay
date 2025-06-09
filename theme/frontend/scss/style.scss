@@ -101,14 +101,27 @@
     display: flex;
     align-items: center;
     padding: 24px 0;
-    text-align: right;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+
+    @include breakpoint(md, max) {
+      flex-direction: column;
+      margin-top: 0;
+    }
 
     &__title {
       left: 0;
       position: absolute;
+
+      @include breakpoint(md, max) {
+        position: relative;
+        margin-bottom: 12px;
+      }
     }
 
     &__btns {
+      overflow: hidden;
       flex: 1;
       padding-left: 160px;
       display: flex;
@@ -135,11 +148,18 @@
           font-weight: bold;
         }
       }
+
+      @include breakpoint(md, max) {
+        justify-content: center;
+        padding-left: 0;
+        width: 100%;
+      }
     }
   }
 
   &-item {
     background-color: #ebebeb;
+    margin-bottom: 8px;
 
     img {
       @include responsive-img();
@@ -158,6 +178,7 @@
       &__name {
         h4 {
           text-transform: uppercase;
+          margin-bottom: 4px;
         }
       }
       &__location {
@@ -197,9 +218,13 @@
     }
 
     &__group {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       padding: 12px;
       padding-top: 0;
+
+      &--rating {
+        margin-bottom: 0;
+      }
     }
 
     &__label {
@@ -264,6 +289,8 @@
   color: #fff;
   background-color: #000;
 
+  @include bg-overlay("../images/bg2.png", rgba(0, 0, 0, 0.8));
+
   &-content {
     position: relative;
     z-index: 2;
@@ -271,14 +298,25 @@
 
     &__list {
       margin-top: 28px;
+      padding-bottom: 24px;
+      gap: 16px;
+      @include breakpoint(md, max) {
+        overflow: auto;
+        display: flex;
+        flex-wrap: nowrap;
+      }
     }
 
     &-item {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
-      margin-bottom: 16px;
 
+      @include breakpoint(md, max) {
+        width: 300px;
+        display: block;
+        flex: 0 0 auto;
+      }
       > img {
         width: 100%;
         object-fit: cover;
@@ -314,6 +352,8 @@
   padding: 32px 0;
   margin-top: 12px;
   margin-bottom: 12px;
+
+  @include bg-overlay("../images/bg3.png");
 
   &-content {
     position: relative;

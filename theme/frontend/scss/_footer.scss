@@ -1,38 +1,35 @@
 .footer {
   padding-top: 24px;
-  &__nav {
+
+  &-nav {
     padding-bottom: 18px;
-  }
-  &__heading {
-    font-weight: bold;
-    margin-bottom: 6px;
-    font-size: 1rem;
-  }
 
-  &__list {
-    list-style: none;
-    padding: 0;
-    li {
-      line-height: 1.5;
+    &__heading {
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 1rem;
     }
-    &--links {
-      list-style: disc;
-      margin-left: 18px;
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      li {
+        line-height: 1.5;
+      }
+      &--links {
+        list-style: disc;
+        margin-left: 22px;
+      }
     }
-  }
 
-  &__column {
-    margin-bottom: 24px;
-  }
-
-  a {
-    &:hover {
-      color: $primary;
+    a {
+      &:hover {
+        color: $primary;
+      }
     }
   }
-
-  &__contact {
-    padding: 24px 0;
+  &-contact {
+    padding: 24px 16px;
     text-align: center;
     background-color: #000;
     color: white;

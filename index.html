@@ -13,14 +13,21 @@
   <body>
     <header class="header">
       <div class="header-hero">
-        <img src="./theme/frontend/images/bg1.png" class="bg" />
-        <div class="overlay"></div>
         <a href="#" class="header-hero__logo">
           <img src="./theme/frontend/images/logo.png" />
         </a>
       </div>
+
       <nav class="header-nav">
+        <button class="header-nav__toggle" aria-label="Toggle menu">
+          <i class="fa fa-bars"></i>
+        </button>
+
         <ul class="header-nav__list">
+          <button class="header-nav__close" aria-label="Đóng menu">
+            <i class="fa fa-close" aria-hidden="true"></i>
+          </button>
+
           <li>
             <a href="#" class="header-nav__link header-nav__link--active"
               >MessageBay</a
@@ -35,33 +42,25 @@
                   <li>
                     <a href="#" class="header-nav__link">Giai đoạn đầu</a>
                   </li>
-                  <li>
-                    <a href="#" class="header-nav__link">Hiện đại</a>
-                  </li>
+                  <li><a href="#" class="header-nav__link">Hiện đại</a></li>
                 </ul>
               </li>
               <li>
                 <a href="#" class="header-nav__link">Đội ngũ</a>
                 <ul class="header-nav__sublist">
                   <li>
-                    <a href="#" class="header-nav__link">Giai đoạn đầu</a>
+                    <a href="#" class="header-nav__link">Hiện đại </a>
                   </li>
                   <li>
-                    <a href="#" class="header-nav__link">Hiện đại</a>
+                    <a href="#" class="header-nav__link">Giai đoạn đầu</a>
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li>
-            <a href="#" class="header-nav__link">Tin tức</a>
-          </li>
-          <li>
-            <a href="#" class="header-nav__link">Counpon</a>
-          </li>
-          <li>
-            <a href="#" class="header-nav__link">Liên hệ</a>
-          </li>
+          <li><a href="#" class="header-nav__link">Tin tức</a></li>
+          <li><a href="#" class="header-nav__link">Coupon</a></li>
+          <li><a href="#" class="header-nav__link">Liên hệ</a></li>
         </ul>
       </nav>
     </header>
@@ -420,7 +419,7 @@
               alt="Banner quảng cáo"
             />
             <img
-              src="./theme/frontend/images/banner-qc.png"
+              src="./theme/frontend/images/banner-qc2.png"
               alt="Banner quảng cáo"
             />
           </div>
@@ -429,107 +428,130 @@
       <!-- Discover -->
 
       <section id="featured" class="featured">
-        <div class="overlay"></div>
-        <img src="./theme/frontend/images/bg2.png" alt="" class="bg" />
+        <div class="container">
+          <div class="featured-content">
+            <div class="featured-content__title section__title">
+              <img src="./theme/frontend/images/spa-featured.png" alt="" />
+            </div>
 
-        <div class="featured-content container">
-          <div class="featured-content__title section__title">
-            <img src="./theme/frontend/images/spa-featured.png" alt="" />
-          </div>
-
-          <div class="grid-container featured-content__list">
-            <a href="#" class="featured-content-item">
-              <img src="./theme/frontend/images/img1.png" alt="" />
-              <div class="featured-content-item__info">
-                <h4>Spa luxuryBoss</h4>
-                <span>Vũng Tàu</span>
-              </div>
-            </a>
-            <a href="#" class="featured-content-item">
-              <img src="./theme/frontend/images/img1.png" alt="" />
-              <div class="featured-content-item__info">
-                <h4>Spa luxuryBoss</h4>
-                <span>Vũng Tàu</span>
-              </div>
-            </a>
-            <a href="#" class="featured-content-item">
-              <img src="./theme/frontend/images/img1.png" alt="" />
-              <div class="featured-content-item__info">
-                <h4>Spa luxuryBoss</h4>
-                <span>Vũng Tàu</span>
-              </div>
-            </a>
-            <a href="#" class="featured-content-item">
-              <img src="./theme/frontend/images/img1.png" alt="" />
-              <div class="featured-content-item__info">
-                <h4>Spa luxuryBoss</h4>
-                <span>Vũng Tàu</span>
-              </div>
-            </a>
-            <a href="#" class="featured-content-item">
-              <img src="./theme/frontend/images/img1.png" alt="" />
-              <div class="featured-content-item__info">
-                <h4>Spa luxuryBoss</h4>
-                <span>Vũng Tàu</span>
-              </div>
-            </a>
+            <div class="grid-container featured-content__list">
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+              <a href="#" class="featured-content-item">
+                <img src="./theme/frontend/images/img1.png" alt="" />
+                <div class="featured-content-item__info">
+                  <h4>Spa luxuryBoss</h4>
+                  <span>Vũng Tàu</span>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
       <!-- Featured -->
 
       <section id="news-section" class="news">
-        <img src="./theme/frontend/images/bg3.png" alt="" class="bg" />
-
-        <div class="container news-content container">
-          <div class="news-content__title section__title">
-            <img src="./theme/frontend/images/news-lasted.png" alt="" />
-          </div>
-          <div class="news-content__list grid-container">
-            <a href="#" class="news-content-item">
-              <img src="./theme/frontend/images/item.png" alt="" />
-              <div class="news-content-item__info">
-                <h4>Nổi bật trên không gian làng quê yên tĩnh,</h4>
-                <p>
-                  là một trong những khách sạn mới nhất của TRÀNG AN LUXURY là
-                  một trong những khách sạn mới nhất của
-                </p>
-              </div>
-            </a>
-            <a href="#" class="news-content-item">
-              <img src="./theme/frontend/images/item.png" alt="" />
-              <div class="news-content-item__info">
-                <h4>Nổi bật trên không gian làng quê yên tĩnh,</h4>
-                <p>
-                  là một trong những khách sạn mới nhất của TRÀNG AN LUXURY là
-                  một trong những khách sạn mới nhất của
-                </p>
-              </div>
-            </a>
-            <a href="#" class="news-content-item">
-              <img src="./theme/frontend/images/item.png" alt="" />
-              <div class="news-content-item__info">
-                <h4>Nổi bật trên không gian làng quê yên tĩnh,</h4>
-                <p>
-                  là một trong những khách sạn mới nhất của TRÀNG AN LUXURY là
-                  một trong những khách sạn mới nhất của
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="news-content__footer">
-            <button>Xem tất cả</button>
+        <div class="container">
+          <div class="news-content">
+            <div class="news-content__title section__title">
+              <img src="./theme/frontend/images/news-lasted.png" alt="" />
+            </div>
+            <div class="news-content__list grid-container">
+              <a href="#" class="news-content-item">
+                <img src="./theme/frontend/images/item.png" alt="" />
+                <div class="news-content-item__info">
+                  <h4>Nổi bật trên không gian làng quê yên tĩnh,</h4>
+                  <p>
+                    là một trong những khách sạn mới nhất của TRÀNG AN LUXURY là
+                    một trong những khách sạn mới nhất của
+                  </p>
+                </div>
+              </a>
+              <a href="#" class="news-content-item">
+                <img src="./theme/frontend/images/item.png" alt="" />
+                <div class="news-content-item__info">
+                  <h4>Nổi bật trên không gian làng quê yên tĩnh,</h4>
+                  <p>
+                    là một trong những khách sạn mới nhất của TRÀNG AN LUXURY là
+                    một trong những khách sạn mới nhất của
+                  </p>
+                </div>
+              </a>
+              <a href="#" class="news-content-item">
+                <img src="./theme/frontend/images/item.png" alt="" />
+                <div class="news-content-item__info">
+                  <h4>Nổi bật trên không gian làng quê yên tĩnh,</h4>
+                  <p>
+                    là một trong những khách sạn mới nhất của TRÀNG AN LUXURY là
+                    một trong những khách sạn mới nhất của
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="news-content__footer">
+              <button>Xem tất cả</button>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- NewsNews -->
     </main>
+    <!-- Main -->
 
     <footer class="footer">
-      <nav class="footer__nav container">
-        <div class="grid-container">
-          <div class="footer__column">
-            <h2 class="footer__heading">Về hotel84.com</h2>
-            <ul class="footer__list footer__list--links">
+      <div class="container">
+        <nav class="footer-nav grid-container">
+          <div class="footer-nav__column">
+            <h2 class="footer-nav__heading">Về hotel84.com</h2>
+            <ul class="footer-nav__list footer-nav__list--links">
               <li><a href="#">Trang chủ</a></li>
               <li><a href="#">Giới thiệu</a></li>
               <li><a href="#">Điều khoản sử dụng</a></li>
@@ -541,9 +563,9 @@
             </ul>
           </div>
 
-          <div class="footer__column">
-            <h2 class="footer__heading">Dịch vụ</h2>
-            <ul class="footer__list footer__list--links">
+          <div class="footer-nav__column">
+            <h2 class="footer-nav__heading">Dịch vụ</h2>
+            <ul class="footer-nav__list footer-nav__list--links">
               <li><a href="#">Viết bài PR quảng cáo khách sạn</a></li>
               <li><a href="#">Tư vấn quảng bá khách sạn</a></li>
               <li><a href="#">Đặt phòng khách sạn</a></li>
@@ -555,8 +577,8 @@
             </ul>
           </div>
 
-          <div class="footer__column">
-            <ul class="footer__list footer__list--text">
+          <div class="footer-nav__column">
+            <ul class="footer-nav__list footer-nav__list--text">
               <li>Quảng bá khách sạn Việt Nam</li>
               <li>Địa chỉ: 38B nghách 6/41/4 Đặng Văn Ngữ, Đống Đa, Hà Nội</li>
               <li>
@@ -580,10 +602,10 @@
               <li>Đối tác khách sạn</li>
             </ul>
           </div>
-        </div>
-      </nav>
-      <div class="footer__contact">
-        <ul class="footer__list--text">
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <ul class="footer-contact__list--text">
           <li>
             Địa chỉ: số nhà 38B, ngách 6/31/5 Đặng Văn Ngữ, phường Phương Liên,
             quận Đống Đa, Hà Nội
@@ -614,5 +636,8 @@
         </ul>
       </div>
     </footer>
+    <!-- Footer -->
+
+    <script src="./theme/frontend/js/main.js"></script>
   </body>
 </html>
